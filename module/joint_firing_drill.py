@@ -234,6 +234,7 @@ def finish_existing_drill(self):
 
 
 def wait_drill_fight_finish(self):
+    rgb_ends = "main_page"
     img_ends = [
         "drill_Season-Record",
         "drill_drill-finish",
@@ -241,7 +242,7 @@ def wait_drill_fight_finish(self):
     img_possibles = {
         'normal_task_fight-confirm': (1168, 659),
     }
-    return picture.co_detect(self, None, None, img_ends, img_possibles, True)
+    return picture.co_detect(self, rgb_ends, None, img_ends, img_possibles, True)
 
 
 def sweep_drill(self, drill_name, count):
